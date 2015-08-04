@@ -9,6 +9,6 @@ class nginx::config {
          ensure => present,
          mode => 0644,
          source => "puppet:///modules/nginx/nginx.conf",
-         require => ["nginx:install"],
+#         require => ["nginx::install"],
     }
 }

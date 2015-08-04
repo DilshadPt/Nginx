@@ -1,3 +1,6 @@
 class nginx {
-  include nginx::install, nginx::config, nginx::service
+  class{'nginx::install': } ->
+  class{'nginx::config': } ->
+  class{'nginx::service': } ->
+  Class["nginx"]
   }
